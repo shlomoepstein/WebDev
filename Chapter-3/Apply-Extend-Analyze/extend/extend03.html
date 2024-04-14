@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- 	
+   Student Name: Shlomo Epstein
+   File Name: extend03.html
+   Date: 4/13/24
+-->
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>CH 3 Extend Your Knowledge</title>
+
+   <style>
+      svg {
+         border: 1px dotted;
+      }
+   </style>
+</head>
+
+<body>
+	<header>
+		<h1>Working with Images and Graphics</h1>
+	</header>
+
+	<nav>
+		<p>
+         <a href="https://support.apple.com/guide/preview/crop-resize-or-rotate-an-image-prvw2015/mac" target="_blank">Software Application</a> &nbsp; &#9679; &nbsp;
+		   <a href="https://tinyjpg.com" target="_blank">Online Compressor</a> &nbsp; &#9679; &nbsp;
+		   <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial" target="_blank">SVG Resource</a>
+      </p>
+	</nav>
+
+	<main>
+		<div id="image">
+         <h3>Modifying Images</h3>
+
+         <!-- 1st paragraph element: Use the paragraph element below to explain the importance of using descriptive file names for image files. Use complete sentences. -->
+         <p>Use descriptive file names. “IMG069.jpg” could be anything, but “cow.jpg”? It's probably a cow.</p>
+
+         <!-- 2nd paragraph element: Use the paragraph element below to identify the application you used to change the size of the image. Use a complete sentence. -->
+         <p>Resized the image using Preview.</p>
+
+         <!-- 3rd paragraph element: Use the paragraph element below to identify the original size of the image, in pixels. Use a complete sentence. -->
+         <p>Original size: 2,121 by 1,414 pixels.</p>
+
+         <h4>Image Before Compression</h4>
+
+         <!-- Use image element below to insert the image before compression, html5.jpg -->
+         <img src="images/html5.jpg" alt="hand writing HTML 5 on glass" width="500px" height="333px">
+
+         <!-- 4th paragraph element: Use the paragraph element below to identify the online image compressor you used to reduce the file size. What was the original image file size? What was the reduced image file size? Use complete sentences.  -->
+         <p>Used <a href="https://tinyjpg.com">tinyjpg.com</a> to compress the image. The original is 29KB, compressed is 26KB.</p>
+
+         <h4>Image After Compression</h4>
+
+         <!-- Use image element below to insert the image after compression, html5_min.jpg -->
+         <img src="images/html5_min.jpg" alt="hand writing HTML 5 on glass" width="500px" height="333px">
+
+         <!-- 5th paragraph element: Use the paragraph element below to note any visual changes that you can see between html5.jpg and html5_min.jpg -->
+         <p>Looks the same to me, but I ain’t no professional.</p>
+      </div>
+
+      <div id="svg">
+         <h3>SVG Graphics</h3>
+
+         <!-- Insert your SVG code below this comment -->
+         <svg width="300" viewBox="-25 -25 450 300">
+            <rect width="400" height="250"
+                  fill="aquamarine"/>
+
+            <rect width="400" height="250"
+                  fill="transparent" stroke="black"/>
+
+            <path d="M -13 -13
+                  h 426
+                  v 276
+                  h -426
+                  v -276"
+               fill="transparent" stroke="black"/>
+
+            <path d="M 110 25
+                     h -35
+                     a 50 50 0 0 0 0 100
+                     a 50 50 0 0 1 0 100
+                     h -45
+                     m 120 -200
+                     l 50 200
+                     l 50 -200
+                     m 110 0
+                     h -35
+                     a 50 100 0 0 0 0 200
+                     a 50 100 0 0 0 50 -100
+                     m -50 0
+                     h 50
+                     v 100"
+                  fill="transparent" stroke="black"
+                  stroke-width="10" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+         </svg>
+
+         <!-- 6th paragraph element: Use the paragraph element below to provide information about the resource you used to help create your SVG image -->
+         <p>I went through the first six parts of MDN’s <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial">SVG tutorial</a>, and supplemented that with <a href="https://css-tricks.com/scale-svg/">How to Scale SVG</a> and <a href="https://www.sarasoueidan.com/blog/svg-coordinate-systems/">Understanding SVG Coordinate Systems</a>, among other resources.</p>
+      </div>
+	</main>
+
+	<footer>
+		<p>Student Name: Shlomo Epstein</p>
+		<p>Chapter 3, Extend Your Knowledge</p>
+	</footer>
+</body>
+</html>
