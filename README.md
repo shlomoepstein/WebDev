@@ -1,1 +1,1 @@
-Exercises for a web development course
+web-development
