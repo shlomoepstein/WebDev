@@ -1,6 +1,6 @@
 '''apply_template.py
 This script applies an HTML template to all HTML files in a directory. It keeps
-content from the <main> element, and replaces everything else with the template.
+everything between the <nav> and <footer>, and replaces the rest with the template.
 
 Rename files to anything other than *.html to exclude them.
 
@@ -19,7 +19,7 @@ Date: 2024-04-09
 
 
 from sys import argv as args
-import os
+import os, re
 from os.path import (isdir,
                      isfile,
                      exists,
@@ -80,7 +80,7 @@ def main():
         if (ext(entry) == '.html' and realpath(entry) != realpath(template_path)):
             html_files.append({'path': normpath(entry.path)})
 
-    # Get the contents of the <main> element from each file
+    # Get the main content from each file
 
     for html in html_files:
         main = ''
@@ -89,6 +89,18 @@ def main():
             in_main = False
 
             for line in file:
+
+                # nasty hack, need to rewrite script to allow granular
+                # control, probably going to need a separate config file
+                if re.search(r'Author:', line):
+                    html['author'] = line
+                if re.search(r'Filename:', line):
+                    html['filename'] = line
+                if re.search(r'Date:', line):
+                    html['date'] = line
+                if re.search(r'<title>', line):
+                    html['title'] = line
+
                 if line.strip() == '</nav>':
                     in_main = True
                     continue
@@ -111,6 +123,21 @@ def main():
         after_main = False
 
         for line in template_file:
+
+            # big bandaid (also they should stop killing ducks to make duck tape)
+            if re.search(r'Author:', line):
+                template[0] += html['author']
+                continue
+            if re.search(r'Filename:', line):
+                template[0] += html['filename']
+                continue
+            if re.search(r'Date:', line):
+                template[0] += html['date']
+                continue
+            if re.search(r'<title>', line):
+                template[0] += html['title']
+                continue
+
             if line.strip() == '</nav>':
                 template[0] += line
                 before_main = False
@@ -140,14 +167,14 @@ def main():
     for html in html_files:
         print(f'  {html["path"]}')
 
-    # match input('\nWould you like to continue? (y, n): ').lower():
-    #     case 'y':
-    #         pass
-    #     case 'yes':
-    #         pass
-    #     case _:
-    #         print('\nNo files have been modified')
-    #         return
+    match input('\nWould you like to continue? (y, n): ').lower():
+        case 'y':
+            pass
+        case 'yes':
+            pass
+        case _:
+            print('\nNo files have been modified')
+            return
 
     # Apply the template
 
