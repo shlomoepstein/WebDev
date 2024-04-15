@@ -123,21 +123,6 @@ def main():
         after_main = False
 
         for line in template_file:
-
-            # big bandaid (also they should stop killing ducks to make duck tape)
-            if re.search(r'Author:', line):
-                template[0] += html['author']
-                continue
-            if re.search(r'Filename:', line):
-                template[0] += html['filename']
-                continue
-            if re.search(r'Date:', line):
-                template[0] += html['date']
-                continue
-            if re.search(r'<title>', line):
-                template[0] += html['title']
-                continue
-
             if line.strip() == '</nav>':
                 template[0] += line
                 before_main = False
