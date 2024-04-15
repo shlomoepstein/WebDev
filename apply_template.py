@@ -180,7 +180,24 @@ def main():
 
     for html in html_files:
         with open(html['path'], 'w') as file:
-            file.write(template[0])
+
+            # big bandaid (also they should stop killing ducks to make duck tape)
+            for line in template[0].splitlines(True):
+                if re.search(r'Author:', line):
+                    file.write(html['author'])
+                    continue
+                if re.search(r'Filename:', line):
+                    file.write(html['filename'])
+                    continue
+                if re.search(r'Date:', line):
+                    file.write(html['date'])
+                    continue
+                if re.search(r'<title>', line):
+                    file.write(html['title'])
+                    continue
+
+                file.write(line)
+
             file.write(html['main'])
             file.write(template[1])
 
