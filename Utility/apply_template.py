@@ -55,8 +55,8 @@ def main():
         print(f'{html_dir} is not a directory')
         return
 
-    # Get the template file from arg 2, if it's set. Default is 'template.html'
-    # in the working directory
+    # Get the template file from arg 2, if it's set. Default is
+    # 'template.html' in the working directory
 
     template_path = normpath(joinpath(html_dir, 'template.html'))
 
@@ -186,7 +186,7 @@ def main():
             file.write(html['main'])
             file.write(template[1])
 
-    # Let the user know that the thing did the thing
+    # Let user know that the thing did the thing
 
     print('\nTemplate applied')
 

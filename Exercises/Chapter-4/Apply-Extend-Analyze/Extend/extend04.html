@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- 	
+   Student Name: Shlomo Epstein
+   File Name: extend04.html
+   Date: 2024-04-25
+-->
+<html lang="en-US">
+<head>
+   <meta charset="utf-8">
+   <title>CH 4 &#x2013; Extend Your Knowledge</title>
+
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro%7CSource+Sans+Pro:400,550">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+   <header>
+      <h1>CSS Colors</h1>
+   </header>
+
+   <main>
+      <div id="colors">
+         <div class="box orange-hex">#f37513</div>
+         <div class="box orange-hsl">hsl<br>(26.37&nbsp;90%&nbsp;51%)</div>
+         <div class="box orange-oklch">oklch<br>(70%&nbsp;0.18&nbsp;50)</div>
+         <div class="box purple-hex">#b180fc</div>
+         <div class="box purple-hsl">hsl<br>(263.68&nbsp;95%&nbsp;74%)</div>
+         <div class="box purple-oklch">oklch<br>(70%&nbsp;0.18&nbsp;300)</div>
+         <div class="box green-hex">#28bc5e</div>
+         <div class="box green-hsl">hsl<br>(141.67&nbsp;65%&nbsp;45%)</div>
+         <div class="box green-oklch">oklch<br>(70%&nbsp;0.18&nbsp;150)</div>
+      </div>
+
+      <div id="questions">
+         <!-- Use the paragraph element below to compare and contrast your findings regarding hexadecimal, RGB, and HSL color codes. -->
+         <h2>Summary of CSS color formats</h2>
+         
+         <p>Hex is not human-readable. RGB is a bit better, but still not intuitive. HSL uses hue, saturation, and lightness instead of red, green, and blue components, which is a lot more human-friendly. Unfortunately, it&#x2019;s not perceptually uniform, and (like RGB and hex) is locked to the sRGB color space. OKLCH uses lightness, chroma (kind of like saturation), and hue; is perceptually uniform, making it easy to work with, and is not locked to any color space. OKLCH is the future. Use OKLCH.</p>
+         
+         <!-- Use the paragraph element below to identify your preferred color code format (hexadecimal, RBG, or HSL) and why. -->
+         <p>Preferred color format: OKLCH (🙄)</p>
+         
+         <!-- Use the paragraph element to discuss HWB color. -->
+         <p>HWB summary: A cylindrical mapping of RGB space, like HSL and HSV. Uses whiteness and blackness instead of saturation and lightness/value.</p>
+         
+         <!-- Use the paragraph element to discuss CMYK color. -->
+         <p>CMYK summary: A subtractive color model, used for printing. Computer displays use additive color models. RGB, HSL, and OKLCH are all additive.</p>
+
+         <!-- Use the paragraph element below to identify the online color converter you used to complete this assignment. Include an absolute link to your resource and include the target attribute to open the page in a new tab. -->
+         <p>Color converter used: <a href="https://oklch.com" target="_blank">oklch.com</a></p>
+      </div>
+   </main>
+
+   <!-- Add a class attribute to the footer element below to set a background color of light blue. Use hexadecimal. -->
+   <footer>
+      <p>Shlomo Epstein<br>Chapter 4 &#x2013; Extend</p>
+   </footer>
+</body>
+</html>

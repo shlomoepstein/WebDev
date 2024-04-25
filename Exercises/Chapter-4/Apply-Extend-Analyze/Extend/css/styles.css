@@ -1,0 +1,191 @@
+/*
+ * Author: Shlomo Epstein
+ * Date: 2024-04-25
+ * File Name: styles.css
+ */
+
+:root {
+   font-size: 125%;
+}
+
+body {
+   background-color: oklch(90% 0.075 250);
+
+   font-family: 'Source Sans Pro';
+   font-weight: 400;
+
+   height: 100vh;
+   display: grid;
+   grid: 'header  header             header' auto
+         '......  main               ......' 1fr
+         'footer  footer             footer' auto
+         /1fr     minmax(0, 1200px)  1fr;
+}
+
+header {
+   grid-area: header;
+   
+   background-color: oklch(70% 0.16 250);
+   
+   text-align: center;
+   padding: 0.6em;
+}
+
+main {
+   grid-area: main;
+   overflow: auto;
+   
+   display: grid;
+   grid: 'colors questions' 1fr
+         /1fr    1fr;
+   
+   p {
+      padding-bottom: 1rem;
+   }
+}
+
+#colors {
+   grid-area: colors;
+   
+   aspect-ratio: 1;
+   padding: 1.5rem;
+   margin-top: 1.5rem;
+   
+   display: grid;
+   grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+   gap: 0.5rem;
+}
+
+#questions {
+   grid-area: questions;
+   
+   padding: 1.5rem;
+   margin-top: 1rem;
+}
+
+footer {
+   grid-area: footer;
+   
+   background-color: oklch(70% 0.16 250);
+   
+   font-size: 0.8rem;
+   text-align: center;
+   padding: 0.5em;
+}
+
+h1 {
+   font-size: 3rem;
+   font-weight: 550;
+}
+
+h2 {
+   font-size: 1.5rem;
+   padding-bottom: 1rem;
+}
+
+p {
+   line-height: 1.5;
+}
+
+a {
+   text-decoration: underline;
+
+   &:hover {
+      color: oklch(50% 0.16 250);
+   }
+}
+
+.box {
+   border-radius: 0.5rem;
+
+   font-family: 'Source Code Pro';
+   font-size: 0.75rem;
+   text-align: center;
+   align-content: center;
+   padding: 0.25rem;
+}
+
+.orange-hex {
+   background-color: #f37513;
+}
+
+.orange-hsl {
+   background-color: hsl(26.37 90% 51%);
+}
+
+.orange-oklch {
+   background-color: oklch(70% 0.18 50);
+}
+
+.purple-hex {
+   background-color: #b180fc;
+}
+
+.purple-hsl {
+   background-color: hsl(263.68 95% 74%);
+}
+
+.purple-oklch {
+   background-color: oklch(70% 0.18 300);
+}
+
+.green-hex {
+   background-color: #28bc5e;
+}
+
+.green-hsl {
+   background-color: hsl(141.67 65% 45%);
+}
+
+.green-oklch {
+   background-color: oklch(70% 0.18 150);
+}
+
+/* 
+header, footer {
+    padding: 2%;
+    text-align: center;
+}
+
+main {
+    padding: 2%;
+    overflow: auto;
+}
+
+main p {
+    font-size: 1.25em;
+    padding: 2%;
+}
+
+main a {
+    color: #0000b3;
+    text-decoration: none;
+}
+
+#orange, #purple, #green {
+    display: block;
+    margin-bottom: 2%;
+    text-align: center;
+    width: 33%;
+    float: left;
+}
+
+#questions {
+    clear: left;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #000;
+    display: inline-block;
+    padding-top: 5%;
+} */
+
+/* Orange */
+
+
+/* Purple */
+
+
+/* Green */

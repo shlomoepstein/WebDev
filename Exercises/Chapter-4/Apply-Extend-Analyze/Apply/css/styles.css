@@ -1,0 +1,107 @@
+/* * * * * * * * * * * * * * * * *
+ * Student Name: Shlomo Epstein  *
+ * File Name: styles.css         *
+ * Date: 4/15/24                 *
+ * * * * * * * * * * * * * * * * */
+
+:root {
+   font-size: 62.5%;
+}
+
+body {
+   height: 100vh;
+   font-family: Geneva, Tahoma, sans-serif;
+   
+   display: grid;
+   grid: "header"    auto
+         "main-grid" 1fr
+        / 1fr;
+   
+   header {
+      grid-area: header;
+   }
+   
+   #main-grid {
+      grid-area: main-grid;
+      overflow: auto;
+      
+      display: grid;
+      grid: "......  main               ......" 1fr
+            "footer  footer             footer" auto
+           / 1fr     minmax(0, 1080px)  1fr;
+      
+      main {
+         grid-area: main;
+         background-color: oklch(90% 0.04 260);
+
+         display: grid;
+         grid: "heading heading" auto
+               "image   article" 1fr
+              / 1fr     1fr;
+
+         h1 {
+            grid-area: heading;
+
+            text-align: center;
+            font-size: 4.0rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 3.0rem;
+            color: oklch(20% 0.04 260);
+         }
+
+         img {
+            grid-area: image;
+
+            padding-inline: 1.0rem;
+         }
+
+         #group {
+            grid-area: article;
+
+            padding-inline: 1.0rem;
+         }
+
+         h3 {
+            padding-block-end: 1.2rem;
+            font-size: 2.6rem;
+         }
+
+         p {
+            padding-block-end: 1.0rem;
+            font-size: 1.6rem;
+         }
+
+      }
+   
+      footer {
+         grid-area: footer;
+
+         text-align: center;
+         font-size: 1.2rem;
+         color: oklch(90% 0.02 260);
+         background-color: oklch(35% 0.1 260);
+         padding: 1.0rem;
+      }
+   }
+}
+
+.site-nav {
+   display: flex;
+   gap: 1.0rem;
+   padding: 0.5rem;
+   background-color: oklch(35% 0.1 260);
+   font-size: 2.0rem;
+   font-weight: bold;
+}
+
+.site-nav a {
+   display: block;
+   padding: 0.5rem 1.0rem;
+   color: oklch(90% 0.02 260);
+}
+
+.external {
+   color: oklch(35% 0.1 260);
+   font-weight: bold;
+   font-style: italic;
+}
