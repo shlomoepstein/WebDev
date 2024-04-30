@@ -1,0 +1,101 @@
+/*/*//*/*//*/*//*/*//*
+Name: Shlomo Epstein
+Date: 2024-04-26
+*//*/*//*/*//*/*//*/*/
+
+:root {
+   font-size: 62.5%;
+}
+
+body {
+   background-color: oklch(95% 0.06 250);
+   font-family: 'Source Sans 3';
+
+   min-height: 100dvh;
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+}
+
+h1 {
+   font-size: 4.2rem;
+   padding: 2.0rem;
+   text-align: center;
+}
+
+h3 {
+   font-size: 1.6rem;
+   font-weight: 550;
+   padding: 0.6rem;
+   text-align: center;
+}
+
+main {
+   margin: 20px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 200px);
+   place-content: center;
+   gap: 10px;
+}
+
+.gradient {
+   display: flex;
+   flex-direction: column;
+   border: 3px solid #000;
+   border-radius: 10px;
+}
+
+.title {
+   flex: auto;
+   align-content: center;
+   background-color: oklch(100% 0.04 250);
+   z-index: -1;
+}
+
+.box {
+   box-sizing: content-box;
+   flex: none;
+   border-top: 3px solid #000;
+   width: 100%;
+   aspect-ratio: 1;
+   z-index: -1;
+}
+
+footer {
+   font-size: 1.2rem;
+   padding: 1.2rem;
+   text-align: center;
+}
+
+/* Gradients */
+
+.gradient1 {
+   background: linear-gradient(to right, #67afcb, #1a3e4c 25%);
+}
+
+.gradient2 {
+   background: linear-gradient(to left, #d4f7ec, #448d76 90%);
+}
+
+.gradient3 {
+   background: linear-gradient(to top left, #efddfd, #36065b);
+}
+
+.gradient4 {
+   background: linear-gradient(#e6e6ff, #70dbdb, #ffc, #c69);
+}
+
+.gradient5 {
+   background: repeating-linear-gradient(#df80ff 10%, #cff 20%);
+}
+
+.gradient6 {
+   background: linear-gradient(to right, rgb(0 0 153 / 0) 25%, rgb(0 0 153 / 1));
+}
+
+.gradient7 {
+   background: radial-gradient(#00f, #fff, #f00);
+}
+
+.gradient8 {
+   background: repeating-radial-gradient(#00f, #fff, #f00 15%);
+}

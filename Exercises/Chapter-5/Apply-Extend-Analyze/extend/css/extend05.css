@@ -1,0 +1,47 @@
+/* 
+Name: Shlomo Epstein
+Date: 2024-04-25
+*/
+
+body {
+   background-color: #dde3fd;
+}
+
+#container {
+   padding-bottom: 500px;
+}
+
+.box {
+   border: 1px solid #000;
+   margin: 2%;
+   padding: 2%;
+   background-color: #798ef6;
+   color: #091034;
+   width: 400px;
+   height: 170px;
+}
+
+.sticky {
+   position: sticky;
+   top: 0;
+}
+
+.relative {
+   position: relative;
+   top: 40px;
+   left: 40px;
+}
+
+
+.fixed {
+   position: fixed;
+   top: 90px;
+   right: 10px;
+}
+
+
+.absolute {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+}

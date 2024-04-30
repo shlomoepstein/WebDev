@@ -16,56 +16,47 @@ body {
 
    height: 100vh;
    display: grid;
-   grid: 'header  header             header' auto
-         '......  main               ......' 1fr
-         'footer  footer             footer' auto
-         /1fr     minmax(0, 1200px)  1fr;
+   grid-template-rows: auto 1fr auto;
 }
 
 header {
-   grid-area: header;
-   
    background-color: oklch(70% 0.16 250);
-   
+
    text-align: center;
    padding: 0.6em;
 }
 
 main {
-   grid-area: main;
-   overflow: auto;
-   
-   display: grid;
-   grid: 'colors questions' 1fr
-         /1fr    1fr;
-   
+   max-width: 600px;
+   margin-inline: auto;
+
+   @media (width >= 1080px) {
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+
    p {
       padding-bottom: 1rem;
    }
 }
 
 #colors {
-   grid-area: colors;
-   
    aspect-ratio: 1;
    padding: 1.5rem;
    margin-top: 1.5rem;
-   
+
    display: grid;
    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
    gap: 0.5rem;
 }
 
 #questions {
-   grid-area: questions;
-   
    padding: 1.5rem;
    margin-top: 1rem;
 }
 
 footer {
-   grid-area: footer;
-   
    background-color: oklch(70% 0.16 250);
    
    font-size: 0.8rem;
@@ -100,6 +91,7 @@ a {
 
    font-family: 'Source Code Pro';
    font-size: 0.75rem;
+   @media (width < 600px) {font-size: 0.5rem;}
    text-align: center;
    align-content: center;
    padding: 0.25rem;
@@ -141,8 +133,8 @@ a {
    background-color: oklch(70% 0.18 150);
 }
 
-/* 
-header, footer {
+
+/* header, footer {
     padding: 2%;
     text-align: center;
 }
@@ -184,8 +176,6 @@ main a {
 
 /* Orange */
 
-
 /* Purple */
-
 
 /* Green */

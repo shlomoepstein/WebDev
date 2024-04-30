@@ -1,0 +1,81 @@
+/*
+* Name: Shlomo Epstein
+* Date: 2024-04-25
+*/
+
+body, header, nav, main, footer, h1, div, img, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+	background-color: #e4f1f6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* mobile viewport */
+
+.tablet-desktop {
+    display: none;
+}
+
+header {
+	font-family: Verdana, Arial, sans-serif;
+	text-align: center;
+    padding: 3%;
+    color: #092834;
+    margin-top: 5%;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+	padding: 1%;
+    margin-bottom: 1%;
+    background-color: #67afcb;
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    font-family: 'B612';
+    font-size: 1.5em;
+    padding: 4%;
+}
+
+nav li a {
+    display: block;
+    color: #092834;
+    text-decoration: none;
+}
+
+main {
+	display: block;
+	margin: 1% 1% 15%;
+	padding: 1%;
+    font-family: 'Crimson Text';
+    font-size: 1.5em;
+}
+
+.corner {
+    border-radius: 12px;
+}
+
+#image {
+    margin-bottom: 1%;
+}
+
+footer {
+	font-size: .70em;
+	text-align: center;
+	margin-top: 2em;
+}

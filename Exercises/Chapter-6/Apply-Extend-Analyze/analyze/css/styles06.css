@@ -1,0 +1,197 @@
+/*
+Name: Shlomo Epstein
+Date: 2024-04-27
+*/
+
+
+/* Fonts */
+
+@font-face {
+   font-family: 'Noe Display';
+   font-style: normal;
+   font-display: swap;
+   font-weight: 500;
+   src: url(fonts/noe-display-medium.woff2), format('woff2');
+}
+
+
+/* Variables */
+
+:root {
+   font-size: 62.5%;    /* 1.0rem == 10px */
+
+   --base: clamp(1.8rem, (1.8rem + (100vw - 400px) / 200), 2.5rem);
+   --scale: 1.25;
+
+   --font-size-small-2: calc(var(--base) * pow(var(--scale), -2));
+   --font-size-small-1: calc(var(--base) * pow(var(--scale), -1));
+   --font-size-base: calc(var(--base) * pow(var(--scale), 0));
+   --font-size-big-1: calc(var(--base) * pow(var(--scale), 1));
+   --font-size-big-2: calc(var(--base) * pow(var(--scale), 2));
+   --font-size-big-3: calc(var(--base) * pow(var(--scale), 3));
+   --font-size-big-4: calc(var(--base) * pow(var(--scale), 4));
+   --font-size-big-5: calc(var(--base) * pow(var(--scale), 5));
+
+   --font-family-base: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+   --font-family-display: 'Noe Display', Georgia, Times, serif;
+
+   --color-bg: #0e141b;
+   --color-text: #ffffff;
+   --color-border: #2d2d2d;
+   --color-primary: #f62a7a;
+}
+
+
+/* Base rules */
+
+body {
+   font-size: var(--font-size-base);
+   font-family: var(--font-family-base);
+   font-weight: normal;
+   line-height: 1.65;
+   color: var(--color-text);
+   background-color: var(--color-bg);
+}
+
+h1, h2, h3 {
+   font-family: var(--font-family-display);
+   font-weight: 500;
+   line-height: 1.2;
+}
+
+h1 {font-size: var(--font-size-big-5);}
+
+h2 {font-size: var(--font-size-big-2);}
+
+h3 {font-size: var(--font-size-big-1);}
+
+
+/* Layout */
+
+body {
+   min-height: 100dvh;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+}
+
+   /* Header */
+
+.page-header {
+   width: 100%;
+   max-width: 1240px;
+   padding: 20px;
+   margin-bottom: 2em;
+   display: flex;
+   gap: 30px;
+   justify-content: space-between;
+   align-items: baseline;
+
+   @media (width < 605px) {
+      margin: 0;
+      border-bottom: 1px solid var(--color-border);
+   }
+}
+
+.logo {
+   display: flex;
+   align-items: baseline;
+   gap: 10px;
+
+   font-size: var(--font-size-big-1);
+   transition: color 100ms ease-in-out;
+
+   &:hover {color: var(--color-primary);}
+
+   img {
+      align-self: center;
+      margin-top: -0.15em;
+      inline-size: 1.5em;
+   }
+
+   h3 {font-family: var(--font-family-base);}
+}
+
+.main-nav {
+   ul {
+      display: flex;
+      gap: 0.75em;
+   }
+
+   a {
+      transition: box-shadow 300ms ease;
+
+      &:hover {box-shadow: 0 2px var(--color-primary);}
+   }
+
+   .minimal {display: none;}
+
+   @media (width < 485px) {
+      .full-size {display: none;}
+      .minimal {display: block;}
+   }
+}
+
+   /* Main content */
+
+main {
+   width: 100%;
+   flex: auto;
+   display: grid;
+   grid: 'title              title         title            '  auto
+         '.................  main-content  .................'  1fr
+         /minmax(32px, 1fr)  auto          minmax(32px, 2fr);
+}
+
+.hero {
+   width: 100%;
+   max-width: 1200px;
+   height: 30dvh;
+   object-fit: cover;
+
+   grid-area: title;
+   justify-self: center;
+
+   @media (width < 605px) {display: none;}
+}
+
+.page-title {
+   padding-inline: 20px;
+   grid-area: title;
+   align-self: end;
+   text-align: center;
+
+   h1 {
+      margin: 1.5em 0 0.4em 0;
+
+      @media (width < 605px) {
+         font-size: var(--font-size-big-4);
+         margin-bottom: 0;
+      }
+
+      @media (width < 455px) {font-size: var(--font-size-big-3);}
+   }
+}
+
+.main-content {
+   grid-area: main-content;
+
+   h2 {
+      margin: 1.5em 0em 0.5em 0em;
+   }
+
+   p {
+      max-width: 50ch;
+      margin-bottom: 3.2rem;
+   }
+}
+
+   /* Footer */
+
+footer {
+   width: 100%;
+   font-size: var(--font-size-small-2);
+   padding-block: 1.5em;
+   border-top: 1px solid var(--color-border);
+   text-align: center;
+}
