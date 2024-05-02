@@ -1,277 +1,337 @@
-body, header, nav, main, footer, h1, div, img, ul {
-    margin: 0;
-    padding: 0;
-    border: 0;
+/* Reset */
+
+* {
+   margin: 0;
+   border: 0;
+   padding: 0;
 }
 
-body {
-    background-color: #000;
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+   max-inline-size: 100%;
+   max-block-size: 100%;
+}
+
+body {
+   background-color: #000;
+}
+
+img {
+   max-width: 100%;
+   display: block;
 }
 
 /* styles for mobile */
 
 header {
-    position: sticky;
-    top: 0;
-    background-color: #000;
-    height: 190px;
+   background-color: #000;
+   height: 190px;
 }
 
 header img {
-    margin: 0 auto;
+   margin: 0 auto;
 }
 
 nav {
-    padding: 1%;
-    margin-bottom: 1%;
+   padding: 1%;
+   margin-bottom: 1%;
 }
 
 nav ul {
-    list-style-type: none;
-    text-align: center;
+   list-style-type: none;
+   text-align: center;
 }
 
 nav li {
-    font-size: 1.5em;
-    font-family: 'Francois One', sans-serif;
-    border-top: 1px solid #fff;
+   font-size: 1.5em;
+   font-family: 'Francois One', sans-serif;
+   border-top: 1px solid #fff;
 }
 
 nav li:first-child {
-    border-top: none;
+   border-top: none;
 }
 
 nav li a {
-    display: block;
-    color: #fff;
-    padding: 0.5em 1em;
-    text-decoration: none;
+   display: block;
+   color: #fff;
+   padding: 0.5em 1em;
+   text-decoration: none;
 }
 
 .mobile {
-    display: block;
+   display: block;
+
+   h3 {
+      text-shadow: 5px 5px 8px #ccc;
+   }
 }
 
 .tablet-desktop {
-    display: none;
+   display: none;
 }
 
 main {
-    background-color: #fff;
-    padding: 2%;
-    font-size: 1.15em;
-    font-family: 'Roboto Slab', serif;
+   background-color: #fff;
+   padding: 2%;
+   font-size: 1.15em;
+   font-family: 'Roboto Slab', serif;
 }
 
 .tel-link {
-    background-color: #404040;
-    padding: 2%;
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
-    border-radius: 5px;
+   background-color: #404040;
+   padding: 2%;
+   margin: 0 auto;
+   width: 80%;
+   text-align: center;
+   border-radius: 5px;
 }
 
 .tel-link a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    display: block;
+   color: #fff;
+   text-decoration: none;
+   font-size: 1.5em;
+   display: block;
 }
 
 .hours {
-    margin-left: 10%;
+   margin-left: 10%;
 }
 
 .action {
-    font-size: 1.35em;
-    color: #660;
-    font-weight: bold;
+   font-size: 1.35em;
+   color: #660;
+   font-weight: bold;
+   text-shadow: 5px 5px 8px #ccc;
+}
+
+.frame {
+   position: relative;
+   max-width: 450px;
+   margin: 2% auto;
+}
+
+figcaption {
+   position: absolute;
+   bottom: 0;
+   background-color: #00000080;
+   color: #fff;
+   width: 100%;
+   padding: 20px;
+   text-align: center;
+   font-family: Verdana, Arial, sans-serif;
+   font-size: 1.5em;
+   font-weight: bold;
 }
 
 #weights, #cardio, #training {
-    margin: 0 2%;
+   margin: 0 2%;
 }
 
 .round {
-    border-radius: 8px;
+   border-radius: 8px;
 }
 
 .external-link {
-    color: #660;
-    font-weight: bold;
-    text-decoration: none;
+   color: #660;
+   font-weight: bold;
+   text-decoration: none;
 }
 
 #contact {
-    text-align: center;
+   text-align: center;
 }
 
 #contact .contact-email-link {
-    color: #660;
-    text-decoration: none;
+   color: #660;
+   text-decoration: none;
 }
 
 .map {
-    border: 2px solid #000;
-    width: 95%;
-    height: 50%;
+   border: 2px solid #000;
+   width: 95%;
+   height: 50%;
 }
 
 footer p {
-    font-size: 0.75em;
-    text-align: center;
-    color: #fff;
-    padding: 0 1em;
+   font-size: 0.75em;
+   text-align: center;
+   color: #fff;
+   padding: 0 1em;
 }
 
 footer p a {
-    color: #fff;
-    text-decoration: none;
+   color: #fff;
+   text-decoration: none;
 }
 
 .roboto-slab {
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+   font-family: "Roboto Slab", serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
 }
 
 .francois-one-regular {
-    font-family: "Francois One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+   font-family: "Francois One", sans-serif;
+   font-weight: 400;
+   font-style: normal;
 }
 
 /* styles for tablet */
 
 @media screen and (min-width: 630px), print {
-    .tablet-desktop {
-        display: block;
-    }
+   .tablet-desktop {
+      display: block;
+   }
 
-    .mobile {
-        display: none;
-    }
+   .mobile {
+      display: none;
+   }
 
-    header {
-        position: static;
-        padding-bottom: 2%;
-    }
+   header {
+      position: static;
+      padding-bottom: 2%;
+   }
 
-    nav li {
-        border-top: none;
-        display: inline-block;
-        border-right: 1px solid #fff;
-    }
+   nav li {
+      border-top: none;
+      display: inline-block;
+      border-right: 1px solid #fff;
+   }
 
-    nav li:last-child {
-        border-right: none;
-    }
+   nav li:last-child {
+      border-right: none;
+   }
 
-    nav li a {
-        padding: 0.1em 0.75em;
-    }
+   nav li a {
+      padding: 0.1em 0.75em;
+   }
 
-    main ul {
-        margin: 0 0 4% 10%;
-    }
-    
-    #exercises {
-        clear: left;
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
-        background: linear-gradient(to right, #ccc, #fff);
-        background-color: #f2f2f2;
-        padding: 1% 2%;
-    }
+   main ul {
+      margin: 0 0 4% 10%;
+   }
 
-    #exercises dt {
-        font-weight: bold;
-    }
+   .grid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px;
+   }
 
-    #exercises dd {
-        padding: 0.5% 1% 2% 0;
-    }
+   figcaption {
+      font-size: 1em;
+      padding: 10px;
+   }
 
-    .tel-num {
-        font-size: 1.25em;
-    }
+   #exercises {
+      clear: left;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      background: linear-gradient(to right, #ccc, #fff);
+      background-color: #f2f2f2;
+      padding: 1% 2%;
+   }
 
-    .map {
-        width: 600px;
-        height: 450px;
-    }
+   #exercises dt {
+      font-weight: bold;
+   }
+
+   #exercises dd {
+      padding: 0.5% 1% 2% 0;
+   }
+
+   .tel-num {
+      font-size: 1.25em;
+   }
+
+   .map {
+      width: 600px;
+      height: 450px;
+   }
 }
 
 /* styles for desktop */
 
 @media screen and (min-width: 1075px), print {
-    header {
-        float: left;
-        width: 25%;
-        padding-bottom: 0;
-    }
+   header {
+      float: left;
+      width: 25%;
+      padding-bottom: 0;
+   }
 
-    nav {
-        float: right;
-        width: 70%;
-        margin: 4em 1em 0 0;
-    }
+   nav {
+      float: right;
+      width: 70%;
+      margin: 4em 1em 0 0;
+   }
 
-    nav ul {
-        text-align: right;
-    }
+   nav ul {
+      text-align: right;
+   }
 
-    nav li {
-        border: none;
-    }
+   nav li {
+      border: none;
+   }
 
-    nav li a {
-        padding: 0.5em 1em;
-    }
+   nav li a {
+      padding: 0.5em 1em;
+   }
 
-    nav li a:hover {
-        color: #000;
-        background-color: #fff;
-    }
+   nav li a:hover {
+      color: #000;
+      background-color: #fff;
+   }
 
-    main {
-        clear: both;
-    }
+   main {
+      clear: both;
+   }
 
-    main h1 {
-        font-size: 1.8em;
-    }
+   main h1 {
+      font-size: 1.8em;
+   }
 
-    #weights, #cardio, #training {
-        width: 29%;
-        float: left;
-        margin: 0 2%;
-    }
+   figcaption {
+      font-size: 1.5em;
+      padding: 20px;
+   }
 
-    #exercises {
-        clear: both;
-    }
+   .frame {
+      opacity: 0.9;
+
+      &:hover {
+         opacity: 1;
+         box-shadow: 8px 8px 10px #808080;
+      }
+   }
+
+   #weights, #cardio, #training {
+      width: 29%;
+      float: left;
+      margin: 0 2%;
+   }
+
+   #exercises {
+      clear: both;
+   }
 }
 
 /* styles for large desktop */
 
 @media screen and (min-width: 1921px) {
-    #container {
-        width: 1920px;
-        margin: 0 auto;
-    }
+   #container {
+      width: 1920px;
+      margin: 0 auto;
+   }
 }
 
 @media print {
-    body {
-        background-color: #fff;
-        color: #000;
-    }
+   body {
+      background-color: #fff;
+      color: #000;
+   }
 }
